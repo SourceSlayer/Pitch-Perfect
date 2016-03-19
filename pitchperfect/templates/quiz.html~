@@ -1,9 +1,0 @@
-{% extends "base.html" %}
-
-{% block content %}
-<h1>{{ quiz.name }}</h1>
-<hr>
-{% for question in quiz.questions %}
-
-{% endfor %}
-{% endblock %}
