@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ quiz.name }}</h1>
+<hr>
+{% if quiz.ordered %}
+{% set seperation_tag="ol" %}
+{% endif %}
+{% for question in quiz.questions %}
+
+{% endfor %}
+{% endblock %}

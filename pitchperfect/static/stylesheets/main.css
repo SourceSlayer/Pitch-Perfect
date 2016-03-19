@@ -1,0 +1,86 @@
+label .sign-in-option{
+    display:inline-block;
+    opacity:.75;
+    border-radius:5px;
+    border:2px solid rgba(0, 0, 0, .9);
+    text-align:center;
+    width:150px;
+    height:150px;
+}
+label .sign-in-option:hover, label .selected{
+    transition:.5s;
+    background:rgba(175, 175, 175, .9);
+}
+
+label .sign-in-option .service-image{
+    /*margin-top:-25px;
+    margin-left:-25px;*/
+    width:100px;
+    height:100px;
+    display:block;
+    margin:auto auto;
+    transition:1s;
+}
+
+label .auth-info{
+    float:left;
+    word-wrap: break-word;
+    width:100px;
+}
+
+#other-authentication{
+    width:470px;/*50*/
+}
+
+#other-authentication .input-area{
+    margin-bottom:10px;
+}
+
+#other-authentication .input-area input{
+    width:300px;
+    float:right;
+}
+
+.hidden-info, .hidden-input{
+    display:none
+}
+
+#openid-entry{
+    min-width:100px !important;
+}
+
+.auth-info .openid-other{
+    min-width:50px;
+}
+
+#sheet-area{
+    background:rgba(30, 40, 50, .6);
+}
+
+@media screen and (max-width:500px){
+    label .sign-in-option{
+        display:block;
+        width:100%;
+        height:50px;
+    }
+    label .sign-in-option .service-image{
+        transition:1s;
+        float:left;
+        width:50px;
+        height:50px;
+        margin:none;
+    }
+    label .sign-in-option .service-name{
+        float:left;
+        font-size:40px;
+    }
+    #other-authentication .input-area .openid-other{
+        float:none;
+        width:300px;
+    }
+    #sheet-area{
+        display:block;
+        width:100%;
+    }
+}
+
