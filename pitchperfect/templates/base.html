@@ -3,12 +3,15 @@
 <head>
 <title>Welcome to Pitch Perfect</title>
 <link rel="stylesheet" type="text/css" href="/static/stylesheets/main.css" />
+{% if "phone" in request.user_agent.platform or "android"==request.user_agent.platform %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endif %}
 <script type="text/javascript" src="/static/scripts/3rd party/jquery-2.2.1.min.js"></script>
 </head>
 <body>
 {% block content %}
 
 {% endblock %}
-&copy; Copyright Poopface inc.
+&copy; Copyright Poopface inc. {{ request.user_agent.browser }} on {{ request.user_agent.platform }}
 </body>
 </html>

@@ -57,7 +57,7 @@ label .auth-info{
     background:rgba(30, 40, 50, .6);
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:500px), screen and (orientation:portrait){
     label .sign-in-option{
         display:block;
         width:100%;
@@ -68,15 +68,14 @@ label .auth-info{
         float:left;
         width:50px;
         height:50px;
-        margin:none;
     }
     label .sign-in-option .service-name{
         float:left;
-        font-size:40px;
+        font-size:20px;
     }
     #other-authentication .input-area .openid-other{
         float:none;
-        width:300px;
+        width:300;
     }
     #sheet-area{
         display:block;
