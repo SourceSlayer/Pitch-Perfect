@@ -9,6 +9,7 @@ from flask.ext.login import LoginManager, login_required
 app=Flask(__name__)
 app.register_blueprint(quizer, url_prefix="/quizes")
 app.secret_key="l"
+print("FSDAESDFSDFersfsrfers")
 
 login_manager, open_id=initialize_authentication(app)
 #=LoginManager()
@@ -24,7 +25,7 @@ login_manager, open_id=initialize_authentication(app)
 def home_page():
     print(request.host)
     return "Richard is gey"
-    
+
 @app.route("/login/<register>", methods=["POST", "GET"])
 @app.route("/login/<register>/<service>", methods=["POST", "GET"])
 @app.route("/login/service", methods=["POST", "GET"])
@@ -50,7 +51,7 @@ def login(register=False, service=None):
 @login_required
 def settings(category=None):
     return "E"
-    
+
 @app.route("/sheet")
 @app.route("/sheet/<key>")
 @app.route("/sheets/<key>")
@@ -62,4 +63,3 @@ def sheets(key=None, artist_name=None, title=None):
 
 if __name__=="__main__":
     app.run(debug=True)
-
