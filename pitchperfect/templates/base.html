@@ -2,16 +2,36 @@
 <html>
 <head>
 <title>Welcome to Pitch Perfect</title>
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/alex-brush" type="text/css">
 <link rel="stylesheet" type="text/css" href="/static/stylesheets/main.css" />
 {% if "phone" in request.user_agent.platform or "android"==request.user_agent.platform %}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {% endif %}
 <script type="text/javascript" src="/static/scripts/3rd party/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="/static/scripts/main.js"></script>
 </head>
 <body>
+<header id="top-menu">
+<nav id="menu-links">
+<ul>
+<li><a href="/index.htm">Home</a></li>
+<li><a href="/lessons.htm">Lessons</a></li>
+<li class="menu-togglable"><a href="/quizer">Test</a></li><!--hiddn-->
+<li><a href="/play.py">Play</a></li>
+<li id="search-container" class="menu-togglable"><form action="search"><input class="search-entry" type="search" /><input id="search-button" type="submit" value="Search"/></form></li>
+</ul>
+</nav>
+</header>
+<br><br><br><h1 id="title">Pitch Perfect</h1><br><br>
+<div id="content-area">
 {% block content %}
 
 {% endblock %}
+</div>
 &copy; Copyright Poopface inc. {{ request.user_agent.browser }} on {{ request.user_agent.platform }}
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
 </body>
 </html>
