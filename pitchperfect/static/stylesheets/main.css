@@ -145,6 +145,23 @@ label .auth-info{
     padding:none;
 }
 
+footer{
+    background:rgb(80, 149, 207);
+    background:rgba(80, 149, 207, .8);
+    background:rgba(80, 149, 207, .8);
+    border-top:1px rgba(0, 0, 0, .8) solid;
+    width:100%;
+    min-height:500px;
+}
+
+.center-container{
+    margin:15px;
+    /*padding:15px;*/
+    float:left;
+    text-align:center;
+    /*border-right:1px rgba(0, 0, 0, .8) solid;*/
+}
+
 @media screen and (max-width:500px), screen and (orientation:portrait){
     label .sign-in-option{
         display:block;
@@ -175,5 +192,13 @@ label .auth-info{
     .search-container{
         display:inline;
     }
+    #menu-links{
+        margin:0 auto;
+        text-align:center;
+    }
+    .sign-in-label{
+        width:100%;
+    }
 }
+
 
