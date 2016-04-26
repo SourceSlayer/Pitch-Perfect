@@ -1,0 +1,34 @@
+#Pitch Perfect
+License: Mozilla Public License MPL 2.1
+
+
+##Fonts
+    ###AlexBrush Font
+    https://fontlibrary.org/en/font/alex-brush
+    
+    Location: /pitchperfect/static/fonts/AlexBrush-Regular-OTC.otf
+    
+    License: Open Font License 1.1 (/pitchperfect/static/fonts/Alex Brush SIL OFL Font License 1.1.txt)
+
+##Art
+    ###Theatre Panoramic
+    https://commons.wikimedia.org/wiki/File:Theatre_Panoramic.jpg
+    
+    Location: /pitchperfect/static/backgrounds/Theatre_Panoramic.jpg
+    
+    License: Creative Commons Attribution-Share Alike 2.0 Canada License (https://creativecommons.org/licenses/by-sa/2.0/ca/legalcode.en)
+    
+    ###Chili Peppers in Toronto
+    https://commons.wikimedia.org/wiki/File:ChilipeppersToronto06-1.JPG
+    
+    Location: /pitchperfect/static/backgrounds/800px-ChilipeppersToronto06-1.JPG
+    
+    License: Creative Commons Attribution-Share Alike Unported License (https://creativecommons.org/licenses/by-sa/3.0/legalcode)
+    
+    
+    ###Red Hot Chili Peppers
+    https://commons.wikimedia.org/wiki/File:Red_hot_chili_peppers.jpg
+    
+    Location: /pitchperfect/static/backgrounds/Red_hot_chili_peppers.jpg
+    
+    License: Creative Commons Attribution-Share Alike 2.5 Generic License (https://creativecommons.org/licenses/by-sa/2.5/legalcode)

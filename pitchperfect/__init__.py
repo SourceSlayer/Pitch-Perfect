@@ -24,8 +24,13 @@ login_manager, open_id=initialize_authentication(app)
 @app.route("/index.html")
 def home_page():
     print(request.host)
+<<<<<<< HEAD
     return "Richard is gey"
 
+=======
+    return render_template("home.html")
+    
+>>>>>>> origin/master
 @app.route("/login/<register>", methods=["POST", "GET"])
 @app.route("/login/<register>/<service>", methods=["POST", "GET"])
 @app.route("/login/service", methods=["POST", "GET"])

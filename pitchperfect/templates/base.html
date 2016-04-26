@@ -2,16 +2,67 @@
 <html>
 <head>
 <title>Welcome to Pitch Perfect</title>
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/alex-brush" type="text/css">
 <link rel="stylesheet" type="text/css" href="/static/stylesheets/main.css" />
 {% if "phone" in request.user_agent.platform or "android"==request.user_agent.platform %}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {% endif %}
 <script type="text/javascript" src="/static/scripts/3rd party/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="/static/scripts/main.js"></script>
 </head>
 <body>
+<header id="top-menu">
+<nav id="menu-links">
+<ul>
+<li><a href="/index.htm">Home</a></li>
+<li><a href="/lessons.htm">Lessons</a></li>
+<li class="menu-togglable"><a href="/quizer">Test</a></li><!--hiddn-->
+<li><a href="/play.py">Play</a></li>
+<li id="search-container" class="menu-togglable"><form action="search"><input class="search-entry" type="search" /><input id="search-button" type="submit" value="Search"/></form></li>
+</ul>
+</nav>
+</header>
+<noscript class="banner"><br><br><br><br><br>This site works better with JavaScript enabled. <a href="/about/javascript">Find out more.</a></noscript>
+<br><br><br><h1 id="title">Pitch Perfect</h1><br><br>
+<div id="content-area">
 {% block content %}
 
 {% endblock %}
+<<<<<<< HEAD
 &copy; Copyright Victor McLean, Seth Nash, Richard Braun {{ request.user_agent.browser }} on {{ request.user_agent.platform }}
+=======
+</div>
+<br><br><br><br><br>
+<footer>
+<div class="center-container credit footer-credit">
+<h5>Legal</h5>
+<a href="/about/credits.htm">Credits</a><br>
+<a href="/legal/terms.htm">Terms of Use</a><br>
+<a href="/about/privacy.htm">Privacy</a><br>
+<a href="/legal/license/mpl.htm">Content Ownership</a><br>
+<a href="/legal/license/mit.htm">Copyright Claims</a>
+</div>
+<div class="center-container credit footer-credit">
+<h5><a href="/about/">About</a></h5>
+<a href="/blog">Blog</a><br>
+<a href="/about/qaa.html">Question and Answer</a><br>
+<a href="/about/contact.html">Contacting Us</a><br>
+<a href="/legal/license/mpl.htm">Mozilla Public License</a><br>
+<a href="/legal/license/mit.htm">MIT License</a>
+</div>
+<div class="center-container credit footer-credit">
+<h5><a href="/about/contributing">Contributing</a></h5>
+<a href="/support">Supporting Pitch Perfect</a><br>
+<a href="/add/music.py">Put Your Music On</a><br>
+<a href="/add/github.py">GitHub</a><br>
+<a href="/add/friends.py">Invite Your Friends</a><br>
+<a href="/add/report">Report Error</a>
+</div>
+&copy; Copyright Victor McLean, Seth Nash, Richard Alexander Braun inc. <br>You are using {{ request.user_agent.browser }} on {{ request.user_agent.platform }} or similar.
+<br><br><br><br><br>
+<br><br><br><br><br>
+</footer>
+<br><br><br><br><br>
+>>>>>>> origin/master
 </body>
 </html>

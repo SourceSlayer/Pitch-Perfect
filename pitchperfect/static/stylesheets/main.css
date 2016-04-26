@@ -1,3 +1,25 @@
+@font-family{
+    font-family:AlexBrushRegular;
+    src:url("/static/fonts/AlexBrush-Regular-OTF.otf") format("opentype");
+}
+
+body{
+    margin:0;
+}
+
+.search-entry{
+    border-radius:15px;
+    width:120px;
+    
+}
+
+#search-container{
+    padding:0;
+    padding-left:0;
+    padding-right:1px;
+    margin:0;
+}
+
 label .sign-in-option{
     display:inline-block;
     opacity:.75;
@@ -28,10 +50,6 @@ label .auth-info{
     width:100px;
 }
 
-#other-authentication{
-    width:470px;/*50*/
-}
-
 #other-authentication .input-area{
     margin-bottom:10px;
 }
@@ -47,6 +65,7 @@ label .auth-info{
 
 #openid-entry{
     min-width:100px !important;
+    display:inline-block;
 }
 
 .auth-info .openid-other{
@@ -55,6 +74,158 @@ label .auth-info{
 
 #sheet-area{
     background:rgba(30, 40, 50, .6);
+}
+
+#top-menu{
+    width:100%;
+    height:50px;
+    position:absolute;
+    background:rgba(255, 255, 255, .8);
+    top:0;
+    left:0;
+    border-bottom:rgb(0, 0, 0) 1px solid;
+    overflow:hidden;
+}
+
+#content-area{
+    max-width:1400px;
+    margin:0 auto;
+}
+
+#title{
+    font-family:AlexBrushRegular, Brush Script;
+    font-size:60px;
+    text-align:center;
+}
+
+#login-form{
+    max-width:100%;
+    min-width:0;
+}
+
+#menu-links{
+    float:right;
+    margin:0;
+    margin-top:-5px;
+    padding:2px;
+    overflow:hidden;
+}
+
+#menu-links ul{
+    padding:auto;
+    margin:16;
+}
+
+#menu-links ul li{
+    list-style-type:none;
+    display:inline;
+    float:left;
+    min-width:50px;
+    text-align:center;
+    padding-left:25px;
+    padding-right:25px;
+    padding-top:4px;
+    padding-bottom:2px;
+}
+
+#menu-links ul li form{
+    width:100px;
+    padding:0;
+    margin:0;
+}
+
+#menu-links ul li:hover{
+    background:rgba(200, 200, 200, .8);
+}
+
+#menu-links ul li a, #search-button{
+    display:inline-block;
+    border:none;
+    background:none !important;
+    text-decoration:none;
+}
+
+#menu-search{
+    width:75px;
+    margin:0;
+    text-shadow:none;
+    border:none;
+    padding:none;
+}
+
+footer{
+    background:rgb(80, 149, 207);
+    background:rgba(80, 149, 207, .8);
+    background:rgba(80, 149, 207, .8);
+    border-top:1px rgba(0, 0, 0, .8) solid;
+    width:100%;
+    min-height:500px;
+}
+
+.center-container{
+    margin:15px;
+    /*padding:15px;*/
+    float:left;
+    text-align:center;
+    /*border-right:1px rgba(0, 0, 0, .8) solid;*/
+}
+
+.parallex-body{
+    width:100%;
+    background-attachment:fixed;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.parallex-content{
+    display:block;
+    width:100%;
+    overflow:visible;
+    min-height:500px;
+    background:rgba(255, 255, 255, .6);
+}
+
+.solid-white{
+    background:rgb(255, 255, 255);
+    height:20px;
+}
+
+.parallex-left{
+    float:left;
+    width:50%;
+    text-align:left;
+}
+
+.parallex-right{
+    float:right;
+    width:50%;
+    text-align:right;
+}
+
+.parallex-right p{
+    padding-right:10px;
+}
+
+.parallex-left p{
+    padding-left:10px;
+}
+
+.half-height{
+    width:50%;
+}
+
+#home-intro{
+    background:url("/static/images/backgrounds/Theatre_Panoramic.jpg");
+    background-attachment:fixed;
+}
+
+#home-sheet{
+    background:url("/static/images/backgrounds/Red_hot_chili_peppers.jpg");
+    background-attachment:fixed;
+}
+
+#intro-content{
+    background:rgba(255, 255, 255, .2);
 }
 
 @media screen and (max-width:500px), screen and (orientation:portrait){
@@ -75,11 +246,25 @@ label .auth-info{
     }
     #other-authentication .input-area .openid-other{
         float:none;
-        width:300;
+        width:300px;
     }
     #sheet-area{
         display:block;
         width:100%;
     }
+    .search-entry{
+        display:none;
+    }
+    .search-container{
+        display:inline;
+    }
+    #menu-links{
+        margin:0 auto;
+        text-align:center;
+    }
+    .sign-in-label{
+        width:100%;
+    }
 }
+
 
