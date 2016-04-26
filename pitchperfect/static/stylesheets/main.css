@@ -3,6 +3,10 @@
     src:url("/static/fonts/AlexBrush-Regular-OTF.otf") format("opentype");
 }
 
+body{
+    margin:0;
+}
+
 .search-entry{
     border-radius:15px;
     width:120px;
@@ -107,6 +111,11 @@ label .auth-info{
     overflow:hidden;
 }
 
+#menu-links ul{
+    padding:auto;
+    margin:16;
+}
+
 #menu-links ul li{
     list-style-type:none;
     display:inline;
@@ -117,7 +126,6 @@ label .auth-info{
     padding-right:25px;
     padding-top:4px;
     padding-bottom:2px;
-    border-right:0 rgba(15, 15, 15, .8) solid;
 }
 
 #menu-links ul li form{
@@ -160,6 +168,64 @@ footer{
     float:left;
     text-align:center;
     /*border-right:1px rgba(0, 0, 0, .8) solid;*/
+}
+
+.parallex-body{
+    width:100%;
+    background-attachment:fixed;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.parallex-content{
+    display:block;
+    width:100%;
+    overflow:visible;
+    min-height:500px;
+    background:rgba(255, 255, 255, .6);
+}
+
+.solid-white{
+    background:rgb(255, 255, 255);
+    height:20px;
+}
+
+.parallex-left{
+    float:left;
+    width:50%;
+    text-align:left;
+}
+
+.parallex-right{
+    float:right;
+    width:50%;
+    text-align:right;
+}
+
+.parallex-right p{
+    padding-right:10px;
+}
+
+.parallex-left p{
+    padding-left:10px;
+}
+
+.half-height{
+    width:50%;
+}
+
+#home-intro{
+    background:url("/static/images/backgrounds/Theatre_Panoramic.jpg");
+    background-attachment:fixed;
+}
+
+#home-sheet{
+    background:url("/static/images/backgrounds/Red_hot_chili_peppers.jpg");
+    background-attachment:fixed;
+}
+
+#intro-content{
+    background:rgba(255, 255, 255, .2);
 }
 
 @media screen and (max-width:500px), screen and (orientation:portrait){

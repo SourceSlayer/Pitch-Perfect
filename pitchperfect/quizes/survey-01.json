@@ -1,0 +1,54 @@
+{
+    "name":"Musical Experience Survey",
+    "type":"survey",
+    "anonymous":"optional",
+    "anonymous_default":true,
+    "randomize_questions":true,
+    "language":"EN-US",
+    "questions":[
+        {
+            "id":"pe1",
+            "type":"text",
+            "required":true,
+            "text":"How many musical instruments do you have experience playing?",
+            "filters":{
+                "format":"INTEGERS",
+                "minimum":0,
+                "maximum":null
+            }
+        },
+        {
+            "depends":{
+                "pe1":["1"]
+            },
+            "type":"check",
+            "text":"Which instruments do/did you primarily play?",
+            "required":true,
+            "answers":[
+                "Guitar",
+                "Piano",
+                "Xylophone",
+                "Drums"
+            ],
+            "enable_other":true,
+            "other_placeholder":"Other Instrument..."
+        },
+        {
+            "depends
+        },
+        {
+            "depends":{
+                "pe1":["yes"]
+            },
+            "text":"How long have you been playing your primary instrument?",
+            "required":true,
+            "type":"text",
+            "filters":{
+                "format":"INTEGERS",
+                "minimum":1,
+                "maximum":100
+            }
+        },
+        
+    ]
+}
