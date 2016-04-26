@@ -170,8 +170,10 @@ footer{
     /*border-right:1px rgba(0, 0, 0, .8) solid;*/
 }
 
-.parallex-body{
+.parallax-body{
     width:100%;
+    min-height:1000px;
+    overflow:hidden;
     background-attachment:fixed;
     background-position:center;
     background-repeat:no-repeat;
@@ -179,8 +181,9 @@ footer{
 
 .parallex-content{
     display:block;
-    width:100%;
-    overflow:visible;
+    width:90%;
+    margin:0 auto;
+    overflow:scroll;
     min-height:500px;
     background:rgba(255, 255, 255, .6);
 }
@@ -190,24 +193,30 @@ footer{
     height:20px;
 }
 
-.parallex-left{
+.parallax-left{
     float:left;
     width:50%;
     text-align:left;
 }
 
-.parallex-right{
+.parallax-right{
     float:right;
     width:50%;
     text-align:right;
 }
 
-.parallex-right p{
+.parallax-right p{
     padding-right:10px;
 }
 
-.parallex-left p{
+.parallax-left p{
     padding-left:10px;
+}
+
+.parallax-separator{
+    width:100%;
+    height:25px;
+    overflow:hidden;
 }
 
 .half-height{
