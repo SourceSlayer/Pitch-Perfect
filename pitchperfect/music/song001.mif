@@ -1,0 +1,38 @@
+// The contents of this file compile down to binary form
+// where it's sorted by play time, stop time rather than
+// instrument. This format is merely used because of the 
+// fact that it's much easier to modify from a script in
+// another language, followed by being read from another
+// program or the same one and played in the audio form.
+KEY: C-Major //Default
+SOURCE: None
+LICENSE: Public Domain
+COMPOSERS: Seth Nash <sourceslayer@gmail.com> //Main Composer must be listed first
+TRANSCRIBER: Seth Nash <sourceslayer@gmail.com>
+
+INCLUDE: {
+    "GUITAR_SOLO":"default_solo.ogg"
+}
+
+TRACKS: {
+    "track-1":{
+        DISTORTION:.4,
+        BALANCE: .2,
+        EFFECTS:{
+            Phaser: Default.Effects.Phaser(rate=1, feedback=0, shift=1),
+            Echo: Default.Effects.Echo(rate=1s, sample=1s)
+        }
+    },
+}
+
+INSTRUMENT GUITAR "lead-guitar" "track-1" {
+    2 2;1s;
+    3 2; 4s;
+    STOP Phaser;
+    3, 2, 3, 2, 4, 3, 2, 4, 3, 2, 3;
+    INITIALIZE Phaser;
+    1s;
+    3, 2, 4~(2s), 4, 3, 2, 3;
+    SET Phaser(rate=2);
+    2, 3, 3, 2;
+}

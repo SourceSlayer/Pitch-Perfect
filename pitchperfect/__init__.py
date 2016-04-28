@@ -52,13 +52,16 @@ def settings(category=None):
     return "E"
     
 @app.route("/sheet")
+@app.route("/sheet.py")
 @app.route("/sheet/<key>")
 @app.route("/sheets/<key>")
 @app.route("/sheet/<artist_name>/<key>")
 @app.route("/sheets/<artist_name>/<key>")
 @app.route("/sheet/<artist_name>/<key>/<title>")
 def sheets(key=None, artist_name=None, title=None):
-    return render_template("sheet.html")
+    if not key==None:
+        key=request.form.get("key", None)
+    return render_template("sheet.html", key=key)
 
 if __name__=="__main__":
     app.run(debug=True)

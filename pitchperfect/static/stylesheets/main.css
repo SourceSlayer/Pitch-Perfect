@@ -13,6 +13,10 @@ body{
     
 }
 
+.center-content{
+    text-align:center;
+}
+
 #search-container{
     padding:0;
     padding-left:0;
@@ -63,6 +67,7 @@ label .auth-info{
     display:none
 }
 
+
 #openid-entry{
     min-width:100px !important;
     display:inline-block;
@@ -73,7 +78,13 @@ label .auth-info{
 }
 
 #sheet-area{
-    background:rgba(30, 40, 50, .6);
+    /*background:rgba(30, 40, 50, .6);*/
+    width:90%;
+    margin:0 auto;
+    border:1px rgb(0, 0, 0) solid;
+    overflow:visible;
+    display:block;
+    resize:both;
 }
 
 #top-menu{
@@ -179,11 +190,11 @@ footer{
     background-repeat:no-repeat;
 }
 
-.parallex-content{
+.parallax-content{
     display:block;
     width:90%;
     margin:0 auto;
-    overflow:scroll;
+    overflow:hidden;
     min-height:500px;
     background:rgba(255, 255, 255, .6);
 }
