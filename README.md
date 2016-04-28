@@ -34,12 +34,14 @@ https://www.mozilla.org/en-US/MPL/2.0/
 - Seth Nash (___Lead Programmer___, Python, Flask, Guitar) <sourceslayer@gmail.com>
     Seth is a python programmer who specializes in other languages. He mainly plays guitar and heads one of the musical clubs in his school.
     Twitter: [@SourceSlayer](https://twitter.com/SourceSlayer)
-    GitHub: [@SourceSlayer](https://www.github.com/SourceSlayer) 
-- Victor McLean (___Lead Scripting___, Front-end scripting, Database, Javascript, Design) <mcleanvictor5@gmail.com>
+    
+    GitHub: [@SourceSlayer](https://www.github.com/SourceSlayer)
+- Victor McLean (___Lead Scripting___, Front-end scripting, Database, Javascript, Design, His Heart) <mcleanvictor5@gmail.com>
     Victor McLean is a programmer who specializes in web development for this project, he works with canvas animations mainly.
-    Twitter: [@Sapientdeath](https://twitter.com/sapientdeath)
+
+    GitHub: [@Sapientdeath](https://github.com/sapientdeath)
 - Richard Alexander Braun (___Lead Something___, Trumpet) <rbraun527@gmail.com>
     Richard specializes in something
-    
+
 ###Contributing
 The main version control for this project can be found on GitHub under SourceSlayer's [Pitch Perfect Repository][3].
