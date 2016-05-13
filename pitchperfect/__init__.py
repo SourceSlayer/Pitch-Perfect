@@ -3,8 +3,9 @@
 from .quizer import quizer
 from .storage import database
 from .login import User, get_open_id, initialize_authentication
-from flask import Flask, render_template, request, abort
+from flask import Flask, render_template, request, abort, send_from_directory
 from flask.ext.login import LoginManager, login_required
+#from flask.ext.markdown import Markdown
 
 app=Flask(__name__)
 app.register_blueprint(quizer, url_prefix="/quizes")
@@ -24,9 +25,9 @@ login_manager, open_id=initialize_authentication(app)
 @app.route("/index.html")
 def home_page():
     print(request.host)
+    print(dir(app.config))
     return render_template("home.html")
 
->>>>>>> origin/master
 @app.route("/login/<register>", methods=["POST", "GET"])
 @app.route("/login/<register>/<service>", methods=["POST", "GET"])
 @app.route("/login/service", methods=["POST", "GET"])
@@ -57,13 +58,32 @@ def settings(category=None):
 @app.route("/sheet.py")
 @app.route("/sheet/<key>")
 @app.route("/sheets/<key>")
+@app.route("/sheet/<key>.json")
 @app.route("/sheet/<artist_name>/<key>")
 @app.route("/sheets/<artist_name>/<key>")
 @app.route("/sheet/<artist_name>/<key>/<title>")
 def sheets(key=None, artist_name=None, title=None):
+    print(dir(request))
     if not key==None:
         key=request.form.get("key", None)
+    if request.url.endswith(".json"):
+        return send_from_directory(app.config["MUSIC_DIRECTORY"], "song001.mif")
     return render_template("sheet.html", key=key)
+
+@app.route("/about/<page>")
+def about_page(page):
+    format={
+        ".html":"html",
+        ".text":"text",
+        ".htm":"html",
+        ".txt":"text",
+        ".md":"text"
+    }.get(page.split(".")[1], )
+    
+    if format!=None:
+        abort(404)
+    elif format=="html":
+        return u"html"
 
 if __name__=="__main__":
     app.run(debug=True)

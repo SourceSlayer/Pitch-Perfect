@@ -73,6 +73,14 @@ label .auth-info{
     display:inline-block;
 }
 
+#seek-selector{
+    width:80%;/*er*/
+}
+
+#seek-field{
+    width:10%;
+}
+
 .auth-info .openid-other{
     min-width:50px;
 }

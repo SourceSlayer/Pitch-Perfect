@@ -43,6 +43,21 @@ License: Mozilla Public License MPL 2.1
     ###Red Hot Chili Peppers
     https://commons.wikimedia.org/wiki/File:Red_hot_chili_peppers.jpg
     
-    Location: /pitchperfect/static/backgrounds/Red_hot_chili_peppers.jpg
+    Location: /pitchperfect/static/images/backgrounds/Red_hot_chili_peppers.jpg
     
     License: Creative Commons Attribution-Share Alike 2.5 Generic License (https://creativecommons.org/licenses/by-sa/2.5/legalcode)
+    
+    ###Music Notes
+    ####G Clef
+    https://en.wikipedia.org/wiki/File:GClef.svg
+    
+    Location: /pitchperfect/static/images/score (Unless otherwise specified here)
+    
+    License: Public Domain
+    
+        ####Whole Note
+        https://commons.wikimedia.org/wiki/File:Daman_semibreve.svg
+        
+        Location: /pitchperfect/static/images/score/semibreve.svg
+        
+        License: Creative Commons Attribution-Share Alike 3.0 Unported License
