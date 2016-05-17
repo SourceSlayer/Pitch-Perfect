@@ -29,7 +29,7 @@ function getScoreSheet(id){
             console.log("DDD: "+sheetRequest.responseText);
     };
     sheetRequest.open("GET", "/sheets/%s.json".replace("%s", (id)), true);
-    sheetRequest.send();
+//    sheetRequest.send();
 }
 
 function loadScoreSheet(sheet){
@@ -58,6 +58,8 @@ $(document).ready(function(){
     var duration=233;//Per Song
     var dWidth=40;
     var timePassed=0;
+    var secondScale=15;
+    var lastSecond=(new Date()).getSeconds();
     seekSlider.attr("max", duration);
     textGradient.addColorStop(0, "black");
     textGradient.addColorStop(1, "orange");
@@ -69,9 +71,41 @@ $(document).ready(function(){
         
     }
     function updateTablature(){
+        //seekSlider.val(seekSlider.val()+0.0005);
+        console.log(seekSlider.val());
         for(var i=0;i<6;i++){
+            context.fillStyle="black";
             y=(canvas.height()/25)*i+15;
+            textY=y+3;
             context.fillRect(0, y, canvas.width(), canvasElement.height/175);
+            context.fillStyle="blue";
+            switch(i){
+            case 0:
+                context.fillText("3", secondScale*4-timePassed, textY);
+                context.fillText("1", secondScale*8-timePassed, textY);
+                context.fillText("0", secondScale*15-timePassed, textY);
+                context.fillText("-", secondScale*16-timePassed, textY);
+                context.fillText("3", secondScale*17-timePassed, textY);
+                context.fillText("1", secondScale*18-timePassed, textY);
+                context.fillText("0", secondScale*19-timePassed, textY);
+                break;
+            case 1:
+                context.fillText("1", secondScale*3-timePassed, textY);
+                context.fillText("0", secondScale*6-timePassed, textY);
+                context.fillText("0", secondScale*12-timePassed, textY);
+                context.fillText("1", secondScale*14-timePassed, textY);
+                context.fillText("1", secondScale*16-timePassed, textY);
+                break;
+            case 2:
+                context.fillText("2", secondScale-timePassed, textY);
+                context.fillText("0", secondScale*5-timePassed, textY);
+                context.fillText("0", secondScale*11-timePassed, textY);
+                context.fillText("2", secondScale*13-timePassed, textY);
+                break;
+            case 3:
+                context.fillText("3", secondScale*10-timePassed, textY);
+                break;
+            }
         }
     }
     function updateSheet(sheet, position){
@@ -112,12 +146,17 @@ $(document).ready(function(){
         }
     }
     window.setInterval(function(){
+        /*if(lastSecond!=(new Date()).getSeconds()){
+            seekSlider.val(secondScale);
+            lastSecond=new Date().getSeconds();
+        }*/
         if(totalResources>=resourcesLoaded)
             resourcesLoaded++;
         context.clearRect(0, 0, canvasElement.width, canvasElement.height);
-        if(totalResources<=resourcesLoaded && contentFormat==sheet.Format.SHEET)
+        //updateSheet(sheet.Clef.BASS);
+        if(totalResources<=resourcesLoaded && contentFormat==sheet.Format.SHEET )
             updateSheet(sheet.Clef.BASS);
-        else if(totalResources<=resourcesLoaded && contentFormat==sheet.Format.TABLATURE)
+        else if(totalResources<=resourcesLoaded/* && contentFormat==sheet.Format.TABLATURE*/)
             updateTablature();
         else{
             context.font="25px Arial";
@@ -129,10 +168,9 @@ $(document).ready(function(){
         }
     }, 100);
     /*Field*/seekSlider.change(function(){
-        var val=seekSlider.val();
-        console.log(seekSlider.val());
-        var minutes=parseInt(val/60).toString();
-        var seconds=val%60;
+        timePassed=seekSlider.val();
+        var minutes=parseInt(timePassed/60).toString();
+        var seconds=timePassed%60;
         minutes=(minutes.length==1 ? "0" : "")+minutes
         console.log(minutes+":"+seconds);
         seekField.attr("value", "00:"+minutes+":"+seconds);
