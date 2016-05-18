@@ -75,6 +75,7 @@ label .auth-info{
 
 #seek-selector{
     width:80%;/*er*/
+    background:transparent;
 }
 
 #seek-field{

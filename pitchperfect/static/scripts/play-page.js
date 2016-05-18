@@ -58,7 +58,8 @@ $(document).ready(function(){
     var duration=233;//Per Song
     var dWidth=40;
     var timePassed=0;
-    var secondScale=15;
+    var secondScale=30;
+    duration*=secondScale;
     var lastSecond=(new Date()).getSeconds();
     seekSlider.attr("max", duration);
     textGradient.addColorStop(0, "black");
@@ -167,13 +168,24 @@ $(document).ready(function(){
             context.stroke();
         }
     }, 100);
-    /*Field*/seekSlider.change(function(){
+    /*Field*/seekSlider.on("input change", function(){
         timePassed=seekSlider.val();
-        var minutes=parseInt(timePassed/60).toString();
+        var hours="00";
+        var minutes=timePassed/60;
         var seconds=timePassed%60;
-        minutes=(minutes.length==1 ? "0" : "")+minutes
-        console.log(minutes+":"+seconds);
-        seekField.attr("value", "00:"+minutes+":"+seconds);
+        if(minutes>=60){
+            hours=parseInt(minutes/60);
+            minutes-=hours*60;
+        }
+        seconds=(seconds.toString().split(".")[0].length==1 ? "0" : "")+seconds;
+        minutes=minutes.toString().split(".")[0];
+        minutes=(minutes.length==1 ? "0" : "")+minutes;
+        hours=hours.toString().split(".")[0];
+        hours=(hours.length==1 ? "0" : "")+hours;
+        seekField.attr("value", hours+":"+minutes+":"+seconds);
+        newSeconds=("D"+(new Date()).getSeconds())
+        //if(newSeconds!=lastSecond)
+        //    seek
     });
         getScoreSheet("rsfdwed32342wdfesad");
 });
